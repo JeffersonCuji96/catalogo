@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/tabulator.min.css' %}">
+<script src="{% static 'js/tabulator-lang.js' %}"></script>
+<script src="{% static 'js/tabulator.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+<div id="json-catalogo">
+    {{ json_data }}
+</div>
+<div class="loader-overlay">
+    <div class="custom-loader"></div>
+</div>
+<h2 class="title-discos">LISTADO DISCOS DE FRENO</h2>
+<div class="container-table">
+    <div id="filtro-global-discos">
+        <input type="text" placeholder="Buscar...">
+        <button type="button" id="btnGuardarDisco" class="css-boton boton-primario" onclick="addRowDisco()">Agregar
+            registro</button>
+        <span class="message-update msg-disco"></span>
+    </div>
+    <div id="tabla_discos"></div>
+    <div id="message-tbldisco">No se encontró ningún registro que coincida con el filtro ingresado.</div>
+</div>
+<h2 class="title-pastillas">LISTADO PASTILLAS DE FRENO</h2>
+<div id="modalFoto" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="foto" src="" alt="Foto">
+    </div>
+</div>
+
+<div class="container-table">
+    <div id="filtro-global-pastillas">
+        <input type="text" placeholder="Buscar...">
+        <button type="button" id="btnGuardarPastilla" class="css-boton boton-primario"
+            onclick="addRowPastilla()">Agregar
+            registro</button>
+        <span class="message-update msg-pastilla"></span>
+    </div>
+    <div id="tabla_pastillas"></div>
+    <div id="message-tblpastilla">No se encontró ningún registro que coincida con el filtro ingresado.</div>
+</div>
+
+<script src="{% static 'js/catalogo.js' %}"></script>
+{% endblock %}
