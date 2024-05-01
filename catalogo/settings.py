@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-CSRF_TRUSTED_ORIGINS = ["https://catalogo-demo.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://catalogo-demo.azurewebsites.net"]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
