@@ -3,7 +3,7 @@ La aplicación presenta información detallada del catálogo en dos tablas princ
 
 ## Demostración
 
-Para revisar la demo debe ingresar al sitio web: https://catalogo-demo.up.railway.app
+Para revisar la demo debe ingresar al sitio web: https://catalogo-demo.azurewebsites.net
 
 ## Vista previa
 
